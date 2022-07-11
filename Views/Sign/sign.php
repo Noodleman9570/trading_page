@@ -13,8 +13,8 @@ if ($_POST['email']) {
     		<h1 id="formTitle" class="title_login">CREAR CUENTA</h1>
     	</section>
 
-    	<section id="formTxt">
-    		<span class="texto_form">Crea una contraseña para comenzar a aprender</span>
+    	<section>
+    		<span id="formTxt" class="texto_form">Crea una contraseña para comenzar a aprender</span>
     	</section>
 
     	<section>
@@ -88,13 +88,15 @@ if ($_POST['email']) {
 					type="file"
 					id="imgUp"
 				/>
-
-				<input
-					type="text"
-					placeholder="Ingresa un alias"
-					name="alias" 
-					id="alias"
-				/>
+				<div class="content_alias">
+					<input
+						class="input_form"
+						type="text"
+						placeholder="Ingresa un alias"
+						name="alias" 
+						id="alias"
+					/>
+				</div>
 
 				<div class="content_submit">
 					<input
