@@ -1,0 +1,23 @@
+*{
+	padding: 0px;
+	margin:  0px;
+	font-family: Century Gothic;
+	list-style: none;
+}
+
+header{
+	display: flex;
+	background: #161616;
+	justify-content: space-between;
+	align-items: center;	
+}
+
+.logo{
+	display: flex;
+	align-items: center;
+}
+
+.logo img{
+	height: 60px;
+	margin-right: 10px;
+}
