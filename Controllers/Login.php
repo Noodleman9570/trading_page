@@ -34,9 +34,9 @@
                             $arrJson = ['error'=>'El usuario no existe o la contraseña es incorrecta'];
                         } else {
                             // Crear nuestras sesiones
-                            $_SESSION['iduser'] = $usuario['id_usuario'];
-                            $_SESSION['name'] = $usuario['nombre'];
-                            $_SESSION['email'] = $usuario['email'];
+                            $_SESSION['iduser'] = $usuario['TM_USU_COD'];
+                            $_SESSION['name'] = $usuario['TM_USU_ALI'];
+                            $_SESSION['email'] = $usuario['TM_USU_EMA'];
                             $_SESSION['login'] = true;
                             $arrJson = ['msg'=>'Inicio de sesion exitoso!'];
                         }

@@ -1,4 +1,3 @@
-
 document.querySelector('#loginForm').addEventListener('submit', function(e){
     e.preventDefault();
     login()
@@ -38,7 +37,6 @@ async function login(){
             setTimeout(function(){
                 window.location.href = `${base_url}/home`;        
             },2500);        
-
         }
 
         

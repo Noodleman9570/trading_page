@@ -11,6 +11,7 @@
 	
 			<section>
 				<form
+					id="loginForm"
 			  		method="POST"
 					autocomplete="on"
 				>
@@ -18,12 +19,14 @@
 						class="input_form"
 						type="e-mail"
 						placeholder="example@e-mail.com"
+						name="email"
 					/>
 	
 					<input
 						class="input_form"
 						type="password"
 						placeholder="******"
+						name="password"
 					/>
 					<div class="content_submit">
 						<input class="submit_form" type="submit" value="Entrar" />

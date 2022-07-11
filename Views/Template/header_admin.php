@@ -24,24 +24,33 @@
       
       <nav>
         <ul>
-          <?php $file = strtolower($_SERVER['REQUEST_URI']);
-          if ($file != '/trading_page/login' || $file == '/trading_page'.'/') {
-            echo "<li>
-            <a href='".BASE_URL."/login' target='_self'>
-              Iniciar Sesión
-            </a>
-          </li>";
-          }
-          ?>    
+          <?php        
+          if (!$_SESSION['login']) {      
 
-          <?php $file = strtolower($_SERVER['REQUEST_URI']);
-          if ($file != '/trading_page/sign') {
-            echo "<li>
-            <a href='".BASE_URL."/sign' target='_self'>
-              Registrarse
-            </a>
-          </li> ";
-          }
+          $file = strtolower($_SERVER['REQUEST_URI']);
+            if ($file != '/trading_page/login' || $file == '/trading_page'.'/') {
+              echo "<li>
+              <a href='".BASE_URL."/login' target='_self'>
+                Iniciar Sesión
+              </a>
+            </li>";
+            }  
+
+            $file = strtolower($_SERVER['REQUEST_URI']);
+            if ($file != '/trading_page/sign') {
+              echo "<li>
+              <a href='".BASE_URL."/sign' target='_self'>
+                Registrarse
+              </a>
+            </li> ";
+            }
+        }else{
+          echo "<li>
+          <a href='".BASE_URL."/logout' target='_self'>
+            Cerrar sesión
+          </a>
+        </li>";
+        }
           ?>   
             <select>
               <option>Español</option>
