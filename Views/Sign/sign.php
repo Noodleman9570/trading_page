@@ -7,13 +7,14 @@ if ($_POST['email']) {
 ?>
 
 
-<article>
+<article class="content_login">
+	<div class="form">
     	<section>
-    		<h1>CREAR CUENTA</h1>
+    		<h1 class="title_login">CREAR CUENTA</h1>
     	</section>
 
     	<section>
-    		<span>Crea una contraseña para comenzar a aprender</span>
+    		<span class="texto_form">Crea una contraseña para comenzar a aprender</span>
     	</section>
 
     	<section>
@@ -22,109 +23,105 @@ if ($_POST['email']) {
                 method="POST"
     			autocomplete="on"
     		>
-    			<ul>
-    				<li>
-    					<input
-                            name="email"
-							id="email"
-    						type="e-mail"
-    						placeholder="example@e-mail.com"
-							value="<?=$email;?>"
-    					/>
-    				</li>
+  
+				<input
+					class="input_form"
+					name="email"
+					id="email"
+					type="e-mail"
+					placeholder="example@e-mail.com"
+					value="<?=$email;?>"
+				/>
 
-    				<li>
-    					<input
-                            name="password"
-							id="pass"
-    						type="password"
-    						placeholder="******"
-    					/>
-    				</li>
+				<input
+					class="input_form"
+					name="password"
+					id="pass"
+					type="password"
+					placeholder="******"
+				/>
 
-                    <li>
-    						<input
-                                name="fechaNacimiento"
-    							type="date"
-    							id="fechaN"
-    						/>
-    					</li>
+				<input
+					name="fechaNacimiento"
+					type="date"
+					id="fechaN"
+				/>
 
-    				<li>
-    					<select id="pais" name="pais"  form="registrarse">
-    						<option>Antigua y Barbuda</option>
-    						<option>Argentina</option>
-    						<option>Bahamas</option>
-    						<option>Barbados</option>
-    						<option>Belice</option>
-    						<option>Bolivia</option>
-    						<option>Colombia</option>
-    						<option>Costa Rica</option>
-    						<option>Cuba</option>
-    						<option>Chile</option>
-    						<option>Dominica</option>
-    						<option>Ecuador</option>
-    						<option>El Salvador</option>
-    						<option>Granada</option>
-    						<option>Guatemala</option>
-    						<option>Guyana</option>
-    						<option>Haití</option>
-    						<option>Honduras</option>
-    						<option>Jamaica</option>
-    						<option>México</option>
-    						<option>Nicaragua</option>
-    						<option>Panamá</option>
-    						<option>Paraguay</option>
-    						<option>Perú</option>
-    						<option>República Dominicana</option>
-    						<option>San Cristóbal y Nieves</option>
-    						<option>San Vicente y las Granadinas</option>
-    						<option>Santa Lucía</option>
-    						<option>Surinam</option>
-    						<option>Trinidad y Tobago</option>
-    						<option>Uruguay</option>
-    						<option>Venezuela</option>
-    					</select>
-    				</li>
-    			</ul>
-    				<ul>
-    					<li>
-    						<input
-                                name="imgProfile"
-    							type="file"
-    							id="imgUp"
-    						/>
-    					</li>
-    					<li>
-    						<input
-    							type="text"
-    							placeholder="Ingresa un alias"
-    							name="alias" 
-    							id="alias"
-    						/>
-    					</li>
-    					<li>
-    						<input
-								id="crear"
-								onclick="show();"
-    							type="button"
-    							value="Crear"
-    						/>
-    					</li>
-						<li>
-    						<input
-								onclick="save();"
-								id="continuar"
-    							type="submit"
-    							value="Continuar"
-    						/>
-    					</li>
-						<li>
-							<a style="color: black;" href="<?=BASE_URL?>/login">¿Ya estás registrado?</a>
-						</li>
-    				</ul>
-    			</form>
+				<select id="pais" name="pais"  form="registrarse">
+					<option>Antigua y Barbuda</option>
+					<option>Argentina</option>
+					<option>Bahamas</option>
+					<option>Barbados</option>
+					<option>Belice</option>
+					<option>Bolivia</option>
+					<option>Colombia</option>
+					<option>Costa Rica</option>
+					<option>Cuba</option>
+					<option>Chile</option>
+					<option>Dominica</option>
+					<option>Ecuador</option>
+					<option>El Salvador</option>
+					<option>Granada</option>
+					<option>Guatemala</option>
+					<option>Guyana</option>
+					<option>Haití</option>
+					<option>Honduras</option>
+					<option>Jamaica</option>
+					<option>México</option>
+					<option>Nicaragua</option>
+					<option>Panamá</option>
+					<option>Paraguay</option>
+					<option>Perú</option>
+					<option>República Dominicana</option>
+					<option>San Cristóbal y Nieves</option>
+					<option>San Vicente y las Granadinas</option>
+					<option>Santa Lucía</option>
+					<option>Surinam</option>
+					<option>Trinidad y Tobago</option>
+					<option>Uruguay</option>
+					<option>Venezuela</option>
+				</select>
+
+
+				<input
+					name="imgProfile"
+					type="file"
+					id="imgUp"
+				/>
+
+				<input
+					type="text"
+					placeholder="Ingresa un alias"
+					name="alias" 
+					id="alias"
+				/>
+
+				<div class="content_submit">
+					<input
+						class="submit_form"
+						id="crear"
+						onclick="show();"
+						type="button"
+						value="Crear"
+					/>
+					<input
+						class="submit_form"
+						onclick="save();"
+						id="continuar"
+						type="submit"
+						value="Continuar"
+					/>
+					<a href="<?=BASE_URL?>/login">¿Ya estás registrado?</a>
+				</div>
+
+				
+
+				
+
+
+    		</form>
     	</section>
-    </article>
+	</div>
+</article>
 
-    <?php footerAdmin($data); ?>
+<?php footerAdmin($data); ?>

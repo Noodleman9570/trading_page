@@ -61,9 +61,8 @@ nav a{
 select{
 	height: 25px;
 	margin-right: 10px;
+	margin-top: 10px;
 	font-weight: bold;
-	background: #D29c02;
-	color: white;
 	border: 0;
 	border-radius: 1px;
 }
@@ -101,7 +100,6 @@ select{
 }
 
 .form{
-
 	align-self: center;
 	width: 50%;
 	height: 60%;
