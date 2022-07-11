@@ -1,8 +1,10 @@
 $('#imgUp, #alias, #continuar').hide();
 
 function show(){
-    $('#imgUp, #alias, #continuar').show();
-    $('#email, #pass, #fechaN, #pais, #crear').hide();
+    $('#alias, #continuar').show();
+    $('#email, #pass, #fechaN, #pais, #crear, #login').hide();
+    $('#formTitle').text('PERSONALIZA TU PERFIL')
+    $('#formTxt').text('Escoge un alias unico para que los demás te reconozcan')
 }
 
 async function save(e){
@@ -24,8 +26,9 @@ async function save(e){
                 text: `${result.error}`,
                 timeout: 2000,
             }).show();      
-            $('#imgUp, #alias, #continuar').hide();
-            $('#email, #pass, #fechaN, #pais, #crear').show();
+            $('#alias, #continuar').hide();
+            $('#email, #pass, #fechaN, #pais, #crear, #formTxt, #login').show();
+            $('#formTitle').html('CREAR CUENTA')
         }else{
             new Noty({
                 type: 'success',

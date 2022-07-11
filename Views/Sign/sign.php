@@ -10,10 +10,10 @@ if ($_POST['email']) {
 <article class="content_login">
 	<div class="form">
     	<section>
-    		<h1 class="title_login">CREAR CUENTA</h1>
+    		<h1 id="formTitle" class="title_login">CREAR CUENTA</h1>
     	</section>
 
-    	<section>
+    	<section id="formTxt">
     		<span class="texto_form">Crea una contraseña para comenzar a aprender</span>
     	</section>
 
@@ -111,8 +111,8 @@ if ($_POST['email']) {
 						type="submit"
 						value="Continuar"
 					/>
-					<a href="<?=BASE_URL?>/login">¿Ya estás registrado?</a>
-				</div>
+					<a id="login" href="<?=BASE_URL?>/login">¿Ya estás registrado?</a>
+				</div> 
 
 				
 
