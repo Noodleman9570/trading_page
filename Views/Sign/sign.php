@@ -88,6 +88,10 @@ if ($_POST['email']) {
 					type="file"
 					id="imgUp"
 				/>
+				<div class="imgProfile">
+					<img id="imgProfile" width="200px" src="<?= IMG ?>/user.png" alt="Image profile">
+				</div>
+				
 				<div class="content_alias">
 					<input
 						class="input_form"
